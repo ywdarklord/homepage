@@ -1,0 +1,452 @@
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	/*background-color: #42413C;*/
+  background: url('https://s3-us-west-2.amazonaws.com/yangwang/images/background.png');
+	margin: 0;
+	padding: 0;
+}
+img{
+	
+}
+
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+.header{
+	/*background-color: #510500;*/
+  background: url('https://s3-us-west-2.amazonaws.com/yangwang/images/AMlogo.png');
+  width:100%;
+  height:90px;
+  
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: -15px;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	alignment-adjust: central;
+	color: #000;
+}
+
+h4{
+	color:#009;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #000;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color:#F00;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color: #000;
+}
+
+/* ~~ This fixed width container surrounds all other divs ~~ */
+.container {
+
+	width: 1300px;
+	/*background-color: #FFFFFF;*/
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	/*background-image:url(https://s3-us-west-2.amazonaws.com/yangwang/images/Totalbackground.png);*/
+}
+
+/* ~~ The header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo. ~~ */
+
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+  position: absolute;
+  padding-top: 10px;
+	float: left;
+	width: 180px;
+  left: 5px;
+	/*border-color:#000;*/
+  text-decoration: none;
+	padding-bottom: 10px;
+
+}
+.content {
+	padding: 10px 0 0 120px;
+	width: 1300px;
+	float: left;
+ 
+	/*border-color:#000;*/
+	/*background-image: url(https://s3-us-west-2.amazonaws.com/yangwang/images/background.jpg);*/
+	background-size: cover;
+	color: #333
+}
+
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+  text-decoration: none;
+}
+ul.nav li {
+	/*border-bottom: 1px solid #666; /* this creates the button separation */
+  text-decoration: none;
+}
+
+ul.nav a{
+  text-decoration: none;
+}
+
+ul.nav a:hover, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	
+  text-decoration: none;
+}
+
+.xs{
+   display: none;
+   padding: 5px 5px 5px 15px;
+  text-decoration: none;
+  margin: 5px auto;
+  width: 160px;
+    font-family:"Helvetica Neue";
+  font-size:14px;
+  font-weight:bold;
+  line-height:250%;
+  color:rgb(68,68,68);
+  text-align:center;
+  text-shadow:0px 1px 0px rgb(255,255,255);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true)";zoom:1;
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true);
+    background-image:-moz-linear-gradient(70% 0% -90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%); 
+  background-image:-webkit-gradient(linear,70% 0%,70% 106%,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(228,228,228)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  -moz-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -webkit-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true);
+
+
+}
+/* ~~ The footer styles ~~ */
+.footer {
+	padding: 10px 0;
+	/*background-color: #CCC49F;*/
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	height:60px;
+}
+
+/* ~~ Miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the .container) if the .footer is removed or taken out of the .container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.education {
+	white-space: pre;
+	
+}
+
+.contactInfo{
+	float:left;
+}
+
+
+.show-btn {
+  padding: 5px 5px 5px 15px;
+  display: block;
+  text-decoration: none;
+  margin: 5px auto;
+  width: 160px;
+    font-family:"Helvetica Neue";
+  font-size:14px;
+  font-weight:bold;
+  line-height:250%;
+  color:rgb(68,68,68);
+  text-align:center;
+  text-shadow:0px 1px 0px rgb(255,255,255);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true)";zoom:1;
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true);
+    background-image:-moz-linear-gradient(70% 0% -90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%); 
+  background-image:-webkit-gradient(linear,70% 0%,70% 106%,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(228,228,228)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  -moz-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -webkit-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true);
+}
+
+.black-overlay{
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index:1001;
+  -moz-opacity: 0.7;
+  opacity:.70;
+  filter: alpha(opacity=70);
+}
+.envelope {
+  display: none;
+  position: absolute;
+  width: 600px;
+  height: 340px;
+  background: url(contactme/images/envelope.png) center no-repeat;
+  z-index:1002;
+  position: relative;
+  margin: 10% auto;
+}
+
+.close-btn {
+  width: 31px;
+  height: 31px;
+  display: block;
+  background: url(contactme/images/close.png);
+  text-indent: -4999px;
+}
+h1.title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size:22px;
+  font-weight: normal;
+  font-weight: 200;
+  text-align:left;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  background: url(contactme/images/divider.png) no-repeat bottom;
+  height: 40px;
+  width: 400px;
+}
+
+input[type=text] {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  background-color:rgb(255,255,255);
+  color: #787474;
+  padding-left: 10px;
+  width:208px;
+  height:33px;
+  border-color:rgb(182,182,182);
+  border-width:1px;
+  border-style:solid;
+  -moz-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+input[type=text]:focus, .your-message:focus {
+  outline: none;
+  background-color:rgb(255,255,255);
+  border-color:rgb(126,139,153);
+  border: 1px solid;
+  -moz-box-shadow:0px 0px 5px 0px rgba(168,178,188,0.75) ,0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.4);
+  -webkit-box-shadow:0px 0px 5px 0px rgba(168,178,188,0.75) ,0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.4);
+  box-shadow:0px 0px 5px 0px rgba(168,178,188,0.75) ,0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.4);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Glow(Color=#bfa8b2bc,Strength=5)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.Glow(Color=#bfa8b2bc,Strength=5)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+}
+
+.your-message {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  background-color:rgb(255,255,255);
+  color: #787474;
+  padding: 10px 0 0 10px;
+  width:448px;
+  height:93px;
+  border-color:rgb(182,182,182);
+  border-width:1px;
+  border-style:solid;
+  -moz-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 2px 0px rgba(0,0,0,0.2);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.your-name {
+  position: absolute;
+  top: 100px;
+  left: 40px;
+}
+
+.email-address {
+  position: absolute;
+  top: 100px;
+  left: 280px;
+}
+
+.send-message {
+  background-image:-moz-linear-gradient(49% 0% -90deg,rgb(171,181,191) 0%,rgb(124,138,152) 100%); 
+  background-image:-webkit-gradient(linear,49% 0%,49% 109%,color-stop(0, rgb(171,181,191)),color-stop(1, rgb(124,138,152)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(171,181,191) 0%,rgb(124,138,152) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(171,181,191) 0%,rgb(124,138,152) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(171,181,191) 0%,rgb(124,138,152) 100%);
+  background-image:linear-gradient(-90deg,rgb(171,181,191) 0%,rgb(124,138,152) 100%);
+  width:130px;
+  height:35px;
+  -moz-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  -webkit-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffabb5bf,endColorstr=#ff7c8a98,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffabb5bf,endColorstr=#ff7c8a98,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+  color: #fff;
+  font-size: 12px;
+  text-shadow: 0 -1px 0px #21405d;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: absolute;
+  top: 269px;
+  right: 100px;
+}
+
+.send-message:hover{
+  background-image:-moz-linear-gradient(49% 0% -90deg,rgb(170,181,195) 0%,rgb(144,157,169) 100%); 
+  background-image:-webkit-gradient(linear,49% 0%,49% 109%,color-stop(0, rgb(170,181,195)),color-stop(1, rgb(144,157,169)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(170,181,195) 0%,rgb(144,157,169) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(170,181,195) 0%,rgb(144,157,169) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(170,181,195) 0%,rgb(144,157,169) 100%);
+  background-image:linear-gradient(-90deg,rgb(170,181,195) 0%,rgb(144,157,169) 100%);
+  width:130px;
+  height:35px;
+  -moz-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  -webkit-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 3px rgb(97,108,122);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffaab5c3,endColorstr=#ff909da9,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffaab5c3,endColorstr=#ff909da9,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+}
+
+.send-message:active{
+  background-image:-moz-linear-gradient(49% 0% -90deg,rgb(142,154,167) 0%,rgb(124,138,152) 100%); 
+  background-image:-webkit-gradient(linear,49% 0%,49% 109%,color-stop(0, rgb(142,154,167)),color-stop(1, rgb(124,138,152)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(142,154,167) 0%,rgb(124,138,152) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(142,154,167) 0%,rgb(124,138,152) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(142,154,167) 0%,rgb(124,138,152) 100%);
+  background-image:linear-gradient(-90deg,rgb(142,154,167) 0%,rgb(124,138,152) 100%);
+  width:130px;
+  height:35px;
+  -moz-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 5px rgb(65,73,85);
+  -webkit-box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 5px rgb(65,73,85);
+  box-shadow:0px 1px 0px 0px rgba(255,255,255,0.5) ,inset 0px 1px 5px rgb(65,73,85);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff8e9aa7,endColorstr=#ff7c8a98,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff8e9aa7,endColorstr=#ff7c8a98,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 1,Color = #80ffffff,Positive = true);
+}
+
+#hideX{
+
+   display: none;
+   padding: 5px 5px 5px 15px;
+  text-decoration: none;
+  margin: 5px auto;
+  width: 160px;
+    font-family:"Helvetica Neue";
+  font-size:14px;
+  font-weight:bold;
+  line-height:250%;
+  color:rgb(68,68,68);
+  text-align:center;
+  text-shadow:0px 1px 0px rgb(255,255,255);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true)";zoom:1;
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true);
+    background-image:-moz-linear-gradient(70% 0% -90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%); 
+  background-image:-webkit-gradient(linear,70% 0%,70% 106%,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(228,228,228)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  -moz-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -webkit-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true);
+
+}
+
+#bar{
+  width: 1200px;
+  height:50px;
+}
+
