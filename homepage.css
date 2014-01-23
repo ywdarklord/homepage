@@ -54,11 +54,12 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ This fixed width container surrounds all other divs ~~ */
 .container {
-
+   z-index: 1;
 	width: 1300px;
 	/*background-color: #FFFFFF;*/
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 	/*background-image:url(https://s3-us-west-2.amazonaws.com/yangwang/images/Totalbackground.png);*/
+
 }
 
 /* ~~ The header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo. ~~ */
@@ -75,16 +76,23 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
 
 */
+
 .sidebar1 {
-  position: absolute;
+  
   padding-top: 10px;
 	float: left;
-	width: 180px;
+	width: 800px;
   left: 5px;
 	/*border-color:#000;*/
   text-decoration: none;
 	padding-bottom: 10px;
 
+}
+#menu ul{
+  list-style: none;
+}
+#menu li{
+  display: inline;
 }
 .content {
 	padding: 10px 0 0 120px;
@@ -196,7 +204,7 @@ ul.nav a:hover, ul.nav a:focus { /* this changes the background and text color f
 
 .show-btn {
   padding: 5px 5px 5px 15px;
-  display: block;
+  display: inline;
   text-decoration: none;
   margin: 5px auto;
   width: 160px;
@@ -229,6 +237,41 @@ ul.nav a:hover, ul.nav a:focus { /* this changes the background and text color f
     progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true);
 }
 
+
+.btn {
+  padding: 5px 5px 5px 5px;
+  display: inline;
+  text-decoration: none;
+  margin: 5px auto;
+  width: 160px;
+    font-family:"Helvetica Neue";
+  font-size:14px;
+  font-weight:bold;
+  line-height:250%;
+  color:rgb(68,68,68);
+  text-align:center;
+  text-shadow:0px 1px 0px rgb(255,255,255);
+  -ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true)";zoom:1;
+  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ffffffff,Positive=true);
+    background-image:-moz-linear-gradient(70% 0% -90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%); 
+  background-image:-webkit-gradient(linear,70% 0%,70% 106%,color-stop(0, rgb(255,255,255)),color-stop(1, rgb(228,228,228)));
+  background-image:-webkit-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-o-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:-ms-linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  background-image:linear-gradient(-90deg,rgb(255,255,255) 0%,rgb(228,228,228) 100%);
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  -moz-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -webkit-box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  box-shadow:0px 1px 0px rgba(0,0,0,0.25) ,0px 0px 2px rgba(0,0,0,0.35);
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true)";
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff,endColorstr=#ffe4e4e4,GradientType=0)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#40000000,Positive=true)
+    progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=0,Color=#59000000,Positive=true);
+}
 .black-overlay{
   display: none;
   position: absolute;
@@ -449,4 +492,65 @@ input[type=text]:focus, .your-message:focus {
   width: 1200px;
   height:50px;
 }
+
+#sddm
+{ 
+  
+  
+  padding-left: 400px;
+  z-index: 999;
+  clear: both;
+}
+
+#sddm li
+{ margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font: bold 11px arial
+
+}
+
+#sddm li a
+{ display: block;
+  margin: 0 1px 0 0;
+  padding: 4px 10px;
+  width: 160px;
+  /*background: #5970B2;
+  color: #FFF;*/
+  text-align: center;
+  text-decoration: none}
+
+#sddm li a:hover
+{ background: #49A3FF}
+
+#sddm div
+{ position: absolute;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  background: #EAEBD8;
+  border: 1px solid #5970B2
+}
+
+  #sddm div a
+  { position: relative;
+    display: block;
+    margin: 0;
+    padding: 5px 10px;
+    width: auto;
+    white-space: nowrap;
+    text-align: left;
+    text-decoration: none;
+    background: #EAEBD8;
+    color: #2875DE;
+    font: 11px arial}
+
+  #sddm div a:hover
+  { background: #49A3FF;
+    color: #FFF}
+
+    #slider1_container{
+     
+    }
 

@@ -1,259 +1,290 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta name="google-site-verification" content="qXD-GzcCs2g4XEDTz0k5-9yTsLFYQpYhau1P-wUdzNk" />
-<meta name="msvalidate.01" content="89BE56FEB5F542C039465148A5486499" />
-<meta charset="UTF-8">
-<title>Yang Wang's Homepage</title>
-<link rel="stylesheet" type="text/css" href="homepage.css" />
-<script>
-  function showCourse(){
-    var c8=document.getElementById("showX");
-    var c0=document.getElementById("hideX");
-    var c1=document.getElementById("614");
-    var c2=document.getElementById("608");
-    var c3=document.getElementById("622");
-    var c4=document.getElementById("611");
-    var c5=document.getElementById("606");
-    var c6=document.getElementById("668");
-    var c7=document.getElementById("670");
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Yang Wang Blod and personal homepage</title>
+     <meta name="description" content="Welcome to Yang Wanghomepage. In here you can view my projects, courses, my travel diary and contact me.">
+    <meta name="keywords" content="Yang Wang, travel, blog, courses,yangwang">
+   
+    <meta name="author" content="Yang Wang">
+    <link rel="shortcut icon" href="images/myico.ico" />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+   
+    <script language="javascript" type="text/javascript" src="homepage.js"></script>
+ 
+        <link id="data-uikit-theme" rel="stylesheet" href="docs/css/uikit.docs.min.css">
+        <link rel="stylesheet" href="docs/css/docs.css">
+        <link rel="stylesheet" href="vendor/highlight/highlight.css">
+        <script src="vendor/jquery.js"></script>
+        <script src="dist/js/uikit.min.js"></script>
+        <script src="vendor/highlight/highlight.js"></script>
+        <script src="docs/js/docs.js"></script>
     
-    c0.style.display="block";
-    c1.style.display="block";
-    c2.style.display="block";
-    c3.style.display="block";
-    c4.style.display="block";
-    c5.style.display="block";
-    c6.style.display="block";
-    c7.style.display="block";
-    c8.style.display="none";
-
-  }
-
-  function hideCourse(){
-    var c0=document.getElementById("hideX");
-    var c1=document.getElementById("614");
-    var c2=document.getElementById("608");
-    var c3=document.getElementById("622");
-    var c4=document.getElementById("611");
-    var c5=document.getElementById("606");
-    var c6=document.getElementById("668");
-    var c7=document.getElementById("670");
-    var c8=document.getElementById("showX");
-    c0.style.display="none";
-    c1.style.display="none";
-    c2.style.display="none";
-    c3.style.display="none";
-    c4.style.display="none";
-    c5.style.display="none";
-    c6.style.display="none";
-    c7.style.display="none";
-    c8.style.display="block";
-
-  }
-</script>
 </head>
 
 <body>
-
-    
-  <div class="header"></div>
-  <div id="envelope" class="envelope">
-      <a class="close-btn" href="javascript:void(0)" onclick = "document.getElementById('envelope').style.display='none';document.getElementById('fade').style.display='none'">Hide</a>
-      <h1 class="title">Send me a message</h1>
-      <form method="post" action="/contactme/send_form_email.php">
-        
-        <input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Your name':this.value;" value="Your Name" name="name" class="your-name"/>
-        
-        <input type="text" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Email address':this.value;" value="Email" name="email" class="email-address"/>
-        
-        <textarea name="comments" class="your-message">Please type your message here..</textarea>
-        
-        <input type="submit" value="Send Message" class="send-message">
-        
-      </form>
-    </div>
-      
-    <div id="fade" class="black-overlay"></div>
-
-<div class="container">
-  <div class="sidebar1">
-    <ul class="nav">
-      <li><a><img  src="https://s3-us-west-2.amazonaws.com/yangwang/images/logo.png"/></a></li>
-      <li><a class="show-btn" href="#" onclick="window.open('https://www.facebook.com/yang.wang.1610');"><img src="https://s3-us-west-2.amazonaws.com/yangwang/images/FB_FindUsOnFacebook-100.png"></a></li>
-      <li><a class="show-btn" href="#" onclick="window.open('http://www.renren.com/246831538');"><img src="https://s3-us-west-2.amazonaws.com/yangwang/images/renrenlogo.png" width="138" height="29"/></a></li>
-      <li><a class="show-btn" href="#" onclick="window.open('https://github.com/ywdarklord');"><img src="https://s3-us-west-2.amazonaws.com/yangwang/images/githublogo.png" width="123" height="33"/></a></li>
-      <li><a class="show-btn" href="#" onclick="window.open('http://www.linkedin.com/pub/yang-wang/80/a97/a3');"><img src="https://s3-us-west-2.amazonaws.com/yangwang/images/linkedinlogo.png" width="40" height="40"/></a></li>
-      <li><a id="showX" class="show-btn" href = "javascript:void(0)" onclick = "showCourse();">Show Courses</a></li>
-      <li><a id="hideX" class="hideX" href="javascript:void(0)" onclick="hideCourse();">Hide Courses</a></li>
-      <li><a id="614" class="xs" href="https://s3-us-west-2.amazonaws.com/yangwang/courses/614/index.html">Computer Architecture</a></li>
-      <li><a id="608" class="xs" href="https://s3-us-west-2.amazonaws.com/yangwang/courses/608/index608.html">Database System</a></li>
-      <li><a id="622" class="xs">Generic Programming</a><li>
-      <li><a id="611" class="xs" href="https://s3-us-west-2.amazonaws.com/yangwang/courses/611/index.html">Operating System</a></li>
-      <li><a id="606" class="xs">Software Engineering</a></li>
-      <li><a id="668" class="xs" href="https://s3-us-west-2.amazonaws.com/yangwang/courses/668/index.html">Distributed System</a></li>
-      <li><a id="670" class="xs">Information Retrieval</a></li>
-      
-      <li>
-        <a class="show-btn" href = "javascript:void(0)" onclick = "document.getElementById('envelope').style.display='block';document.getElementById('fade').style.display='block'">Contact Me!</a>
-       
-   
-    </li>
-    
-    </ul>
-    <p> </p>
-    <!-- end .sidebar1 --></div>
-   
-
-  <div class="content">
-
-   <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <!-- use jssor.slider.mini.js (39KB) or jssor.sliderc.mini.js (31KB, with caption, no slideshow) or jssor.sliders.mini.js (26KB, no caption, no slideshow) instead for release -->
-    <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.core.js + jssor.utils.js + jssor.slider.js) -->
-    <script type="text/javascript" src="js/jssor.core.js"></script>
-    <script type="text/javascript" src="js/jssor.utils.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            var options = {
-                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-                $DirectionNavigatorOptions: {                       //[Optional] Options to specify and enable direction navigator or not
-                    $Class: $JssorDirectionNavigator$,              //[Requried] Class to create direction navigator instance
-                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                    $AutoCenter: 0,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-                }
-            };
-
-            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-        });
-    </script>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles (except 'top', 'left', 'width' and 'height') to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1200px;
-        height: 900px; ">
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1200px; height: 800px;
-            overflow: hidden;">
-            <div><img u="image" src="https://s3-us-west-2.amazonaws.com/yangwang/slides/001.jpg" /></div>
-            <div><img u="image" src="https://s3-us-west-2.amazonaws.com/yangwang/slides/002.jpg" /></div>
-            <div><img u="image" src="https://s3-us-west-2.amazonaws.com/yangwang/slides/003.jpg" /></div>
-            <div><img u="image" src="https://s3-us-west-2.amazonaws.com/yangwang/slides/004.jpg" /></div>
-            <div><img u="image" src="https://s3-us-west-2.amazonaws.com/yangwang/slides/005.jpg" /></div>
+    <div id="main">
+    	<div class="container">
             
-        </div>
-        
-        <!-- Direction Navigator Skin Begin -->
-        <style>
-            /* jssor slider direction navigator skin 03 css */
-            /*
-            .jssord03l              (normal)
-            .jssord03r              (normal)
-            .jssord03l:hover        (normal mouseover)
-            .jssord03r:hover        (normal mouseover)
-            .jssord03ldn            (mousedown)
-            .jssord03rdn            (mousedown)
-            */
-            .jssord03l, .jssord03r, .jssord03ldn, .jssord03rdn
-            {
-              
-                position: absolute;
+        	<div id="header">
+            
+           <nav class="uk-navbar">
 
-              cursor: pointer;
-              display: block;
-                background: url(img/d03.png) no-repeat;
-                overflow:hidden;
-            }
-            .jssord03l { background-position: -3px -33px; }
-            .jssord03r { background-position: -63px -33px; }
-            .jssord03l:hover { background-position: -123px -33px; }
-            .jssord03r:hover { background-position: -183px -33px; }
-            .jssord03ldn { background-position: -243px -33px; }
-            .jssord03rdn { background-position: -303px -33px; }
-        </style>
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssord03l" style="width: 55px; height: 55px; top: 280px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <span u="arrowright" class="jssord03r" style="width: 55px; height: 55px; top: 280px; right: 8px">
-        </span>
-        <!-- Direction Navigator Skin End -->
-        <a style="display: none" href="http://www.jssor.com">jQuery Slideshow</a>
+                                <ul class="uk-navbar-nav">
+                                    <li class="uk-active"><a href="">About me</a></li>
+
+                                      <li class="uk-parent" data-uk-dropdown>
+                                        <a href="">Courses</a>
+
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                                <li class="uk-nav-header">Spring 2013</li>
+                                                <li><a href="#">Generic Programming</a></li>
+                                                <li><a href="#">Analysis of Algorithm</a></li>
+                                                <li class="uk-nav-header">Fall 2013</li>
+                                                <li><a href="#">Computer Architecture</a></li>
+                                                <li><a href="#">Software Engineering</a></li>
+                                                <li><a href="#">Database System</a></li>
+                                                <li class="uk-nav-header">Spring 2014</li>
+                                                <li><a href="#">Operating System</a></li>
+                                                <li><a href="#">Information Retrieval</a></li>
+                                                <li><a href="#">Distributed System</a></li>
+                                                <li class="uk-nav-header">Fall 2014</li>
+                                            
+                                                <li class="uk-nav-divider"></li>
+                                                <li><a href="#">Recent Trip(Hawaii)</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    
+
+
+
+                                    <li class="uk-parent" data-uk-dropdown>
+                                        <a href="">Itinerary</a>
+
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                                <li class="uk-nav-header">Asia</li>
+                                                <li><a href="#">Japan</a></li>
+                                                <li><a href="#">Thailand</a></li>
+                                                <li class="uk-nav-header">North America</li>
+                                                <li><a href="#">U.S</a></li>
+                                                <li class="uk-nav-header">Europe</li>
+                                                <li><a href="#">Germany</a></li>
+                                                <li class="uk-nav-header">South Pacific</li>
+                                                <li><a href="#">Australia</a></li>
+                                                <li class="uk-nav-divider"></li>
+                                                <li><a href="#">Recent Trip(Hawaii)</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+
+                                    <li class="uk-parent" data-uk-dropdown>
+                                        <a href="">Projects</a>
+
+                                        <div class="uk-dropdown uk-dropdown-navbar">
+                                            <ul class="uk-nav uk-nav-navbar">
+                                                <li><a href="#">Database System</a></li>
+                                                <li><a href="#">Cache replacement policy</a></li>
+                                                
+                                                <li><a href="#">Mini-Operating System</a></li>
+                                             
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" data-uk-offcanvas="{target:'#offcanvas-4'}">More...</a></li>
+
+                                </ul>
+                                
+
+                                <div class="uk-navbar-flip">
+                                    <div>
+               
+                                    </div>
+
+                                </div>
+               
+                            </nav>
+                
+            	<div id="logo">
+               	  <h1>Creatif</h1>
+                    <small>A Family of Rockstar Wordpress Themes</small>
+                </div>
+            
+            </div>
+            
+            <div id="block_featured" class="block">
+				<img src="images/ribbon_featured.png" class="ribbon" alt="Featured Project"/>
+            	<div class="block_inside">
+                
+                	<div class="image_block">
+                    	<img src="images/fb.jpg" alt="Eden"/>
+                    </div>
+                    <div class="text_block">
+                        <h2>My Hawaii Holidays</h2>
+                        <small>in <a href="">Oahu</a>, <a href="">Maui</a>, <a href="">Kauai</a>and<a href="">Big Island</a></small>
+                        
+                        <p>Hi I am Yang Wang. I have a trip to Hawaii with family during this winter. We been there for about 2 weeks and stay in 4 different islands. I write a blog about this trip and giving some tips.<a> Click here for more details.</a></p>
+                        <br />
+                        <a href="" class="button">View Itinerary</a>
+                        
+                	</div>
+                    
+                </div>
+            </div>
+
+
+            <div id="offcanvas-4" class="uk-offcanvas">
+
+                                <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+
+                                    <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                                        <li><a href="">Leave me a message</a></li>
+                                        <li class="uk-active"><a href="">Active</a></li>
+
+                                        <li class="uk-parent">
+                                            <a href="#">Parent</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="">Sub item</a></li>
+                                                <li><a href="">Sub item</a>
+                                                    <ul>
+                                                        <li><a href="">Sub item</a></li>
+                                                        <li><a href="">Sub item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="uk-parent">
+                                            <a href="#">Parent</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="">Sub item</a></li>
+                                                <li><a href="">Sub item</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="">Item</a></li>
+
+                                        <li class="uk-nav-header">Header</li>
+                                        <li class="uk-parent"><a href="#"><i class="uk-icon-star"></i> Parent</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="">Sub item</a></li>
+                                                <li><a href="">Sub item</a>
+                                                    <ul>
+                                                        <li><a href="">Sub item</a></li>
+                                                        <li><a href="">Sub item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+    
+
+
+                                        </li>
+
+                           
+               <li> <a href="https://twitter.com/darklordyoung" class="uk-icon-twitter">@darklordyoung</a></li>
+               <li> <a href="https://www.facebook.com/yang.wang.1610" class="uk-icon-facebook-square">Facebook</a></li>
+               <li> <a href="https://github.com/ywdarklord" class="uk-icon-github">Github</a></li>
+               <li> <a href="http://www.linkedin.com/pub/yang-wang/80/a97/a3" class="uk-icon-linkedin-square">Linkedin</a></li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href=""><i class="uk-icon-rss"></i> RSS</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+            
+            <div id="block_portfolio">
+            
+            	<div id="portfolio_items">
+                
+                	<div class="mini_portfolio_item">
+                    	<img src="images/ribbon_recent.png" class="ribbon" alt="Recent Projects"/>
+                    	<div class="block_inside">
+                            <img src="images/email.jpg" class="thumbnail" alt="AudioJungle" />
+                            <h3>Email Receiving and Processing</h3>
+                            <p>Website design for leading photoshop tutorial site and creation and maintenance of Wordpress theme. <a href="#">View Project</a></p>
+                        </div>                    
+                    </div>
+                    
+                	<div class="mini_portfolio_item">
+                    	<div class="block_inside">
+                            <img src="images/cache.png" class="thumbnail"  alt="CollisTaeed" />
+                            <h3>New Cache Replacment Policy-Computer Architecture</h3>
+                            <p>Website design for leading photoshop tutorial site and creation and maintenance of Wordpress theme. <a href="#">View Project</a></p>
+                        </div>                    
+                    </div>
+                    
+                    <div class="mini_portfolio_item">
+                    	<div class="block_inside">
+                            <img src="images/qiniu.jpg" class="thumbnail" alt="PSDTUTS"  />
+                            <h3>Internship at Qiniu Cloud Storage</h3>
+                            <p>Website design for leading photoshop tutorial site and creation and maintenance of Wordpress theme. <a href="#">View Project</a></p>
+                        </div>                    
+                    </div>
+                
+                </div>
+                
+                <div id="text_column">
+                    <h2 id="text_title">Welcome to my homepage. I am Yang Wang You can view my blog, resume and projects all here.</h2>
+                    <p>In here you can see my travel diary for different countries and cities including USA, Egypt, Eurpoe, Asia and Australia</p>
+                    <p>Also here are some my recent projects, which I am working on. Some of them are course project and some of them are what I have done during my internship. Also some projects are just driven by my interesting.</p>
+                  <p>If you have any questions you can always leave me a message for me. </p>
+                  <p>Recent News: 
+                  <ul>
+                  <li>They met with Masahiro Tanaka for almost three hours at a private residence</li>
+                  <li>Rafael Nadal says he needs to quickly improve his misfiring serve</li>
+                  <li>The University of Oklahoma locked down its campus Wednesday</li>
+                  </ul>
+                  
+                  </p>
+             
+			  </div>
+	
+            </div>
+        
+        </div>
     </div>
 
-    <div class="resume">
-    <h2 >Yang Wang</h4>
-    <h4><u>OBJECTIVE</u></h4>
-    <p>Seeking a co-op (Fall 2014) or internship (Summer 2014) in the field of Computer Science, specifically software developer where I can contribute to the success of the company by applying my professional skills and knowledge.</p>
-    
-    <h4>&nbsp;</h4>
-    <h4><u>EDUCATION</u></h4>
-    <p align="left" class="education"> <strong>Texas A&M University</strong>, College Station &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09/2012-12/2014 <br>
-    Current major: <em>Master in Computer Science</em> GPA: 3.8/4.0</p>
-    <p align="left" class="education">&nbsp; </p>
-    <p align="left" class="education"><strong>Shanghai Ocean University</strong> Graduate 06/2012 <br>
-    <em>Bachelor of Science in Geo-information System (GIS) GPA:</em> 3.7/4.0</p>
-    <h4>&nbsp;</h4>
-    <h4><u>RELEVANT COURSES</u></h4>
-    <p>Analysis of Algorithm;&nbsp; Information Retrieval; &nbsp;Database System; &nbsp;Generic Programming</p>
-    <p>Operating System;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operating System;&nbsp;&nbsp;&nbsp; Computer Architecture; Software Enginnering;</p>
-    <h4>&nbsp;</h4>
-    <h4><u>TECHNICAL SKILLS</u></h4>
-    <p>Languages: C++, Python, Ruby, Go, SQL, MATLAB.</p>
-    <p>Proficient in C++.</p>
-    <p>Familiar with HTML, XML, PHP and Go</p>
+    <div id="footer">
+    	<div class="container">
+        
+        	<div class="footer_column long">
+                <h3>Address: College Station, TX, 77840</h3>
+                <p>Department of Computer Science and Engineering, Texas A&M University</p>
+			</div>
 
-    <h4>&nbsp;</h4>
-    <h4><u>WORK EXPERIENCE</u></h4>
-    <p align="left" class="work"><strong>Qiniu Cloud Storage Technologies Co., Ltd. Shanghai, China</strong>  <br>
-    <em>Back-End Engineer</em></p>
-    <ul>
-      <li>Maintenance and update SDK including C++, Python and PHP.  </li>
-      <li>Build Small form-upload webpage use <a href="https://github.com/ywdarklord/Python-example">Python</a>, <a href="https://github.com/ywdarklord/Ruby-example">Ruby</a>, <a href="https://github.com/ywdarklord/PHP-example">PHP</a> and <a href="https://github.com/ywdarklord/Go-Example">Go</a></li>
-      <li>Develop <a href="https://github.com/ywdarklord/AutoEmailRespond">Auto-emaing and processing program</a> in Python</li>
-    </ul>
-    <p align="left" class="work">&nbsp;</p>
-    <p align="left" class="work"><strong>Texas A&M University </strong>  <br>
-      <em>Research Assistant</em></p>
-    <ul>
-      <li>Designed and implemented MySQL database of remote sensing information.</li>
-      <li>Implemented batch data processing under Python and ArcGIS. </li>
-    </ul>
-    <p align="left" class="work">&nbsp;</p>
-    <p align="left" class="work"><strong>Shanghai Ocean University</strong><br>
-    <em>Fishery Web-GIS Consulting System Based on Remote Sensing Data</em> </p>
-    <ul>
-      <li>Build webpage to display remote sensing image</li>
-      <li>Analyze RS image and inversion of sea water salinity  </li>
-    </ul>
-    <h4>&nbsp;</h4>
-    <h4><u>PROJECTS</u></h4>
-    <p align="left" class="work"><strong>Cache Replacement Policy Using Frequency Information </strong>
-    </p>
-    <ul>
-      <li>Use Re-reference Interval Prediction algorithm to reduce LLC miss rate.</li>
-      <li>Analysis performance vs. different cache replacement policy using SimpleScalar.</li>
-    </ul>
-    <p align="left" class="work"><strong>Network Application  </strong></p>
-    <ul>
-      <li>Build a message processing application based on TCP connection.</li>
-    </ul>
-    <p align="left" class="work"><strong>Database System Design  </strong></p>
-    <ul>
-      <li>Design database for invoice and order information query of a reseller company.</li>
-      <li>Implemented GUI in Java and connection between Java program and MySQL database.</li>
-      <li>Write small web form-upload page for distance information inputting into database.</li>
-    </ul>
-  </div>
-    
-  </div>
- 
-  <div class="footer">
-    <p class="contactInfo">1601 Holleman Dr. College Station TX</p>
-    <p><a href="mailto:wyang1989@tamu.edu">wyang1989 [at] tamu.edu</a></p>
-    <p style="float:left"><a href="http://freehitcountercode.com/">visitors: <img border="0" src="http://www.freehitcountercode.com/counter.php?b=ffffff&r=000000&f=000000&unique=1&start=0" width="120" height="30" /></a><br /><span style="font-size: 5%;"><a href="http://freehitcountercode.com/"></a></span></p>
-    <!-- end .footer --></div>
-  <!-- end .container --></div>
+	        <div class="footer_column">
+                <h3>More Links</h3>
+				<ul>
+                    <li><a href="#">Texas A&M University</a></li>
+            		<li><a href="#">Qiniu Cloud Storage</a></li>
+            		<li><a href="#">CS Department</a></li>
+            		<li><a href="#">Leetcode</a></li>
+            		<li><a href="#">Geeksforgeek</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_column">
+                <h3>RSS</h3>
+				<ul>
+                    <li><a href="">RSS Feed</a></li>
+            		<li><a href="">What is RSS?</a></li>
+                </ul>
+            </div>
+        
+        </div>
+    </div>
 </body>
 </html>
